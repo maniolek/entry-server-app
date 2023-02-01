@@ -11,7 +11,7 @@ export class AppController {
 
   @Get('/rick')
   async getImageUrl(): Promise<string> {
-    const client = new S3Client({});
+    const client = new S3Client({ region: 'eu-central-1' });
     const command = new GetObjectCommand({
       Bucket: 'maniolek-1',
       Key: 'rick-astley.jpg',
