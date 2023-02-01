@@ -16,6 +16,6 @@ export class AppController {
       Bucket: 'maniolek-1',
       Key: 'rick-astley.jpg',
     });
-    return await getSignedUrl(client, command);
+    return await getSignedUrl(client, command, { expiresIn: 60 });
   }
 }
