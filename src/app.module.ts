@@ -1,4 +1,5 @@
 import { Module } from '@nestjs/common';
+import { ConfigModule } from '@nestjs/config';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { AppController } from './app.controller';
 import { Entry } from './entry/entry.entity';
@@ -19,6 +20,7 @@ import { EntryModule } from './entry/entry.module';
     //   entities: [Entry],
     // }),
     // EntryModule,
+    ConfigModule.forRoot(),
   ],
   controllers: [AppController],
 })
