@@ -7,19 +7,19 @@ import { EntryModule } from './entry/entry.module';
 
 @Module({
   imports: [
-    // TypeOrmModule.forRoot({
-    //   type: 'mysql',
-    //   host: 'localhost',
-    //   port: 3306,
-    //   // username: 'admin',
-    //   // password: 'adminadmin',
-    //   // database: 'test',
-    //   username: 'root',
-    //   password: 'test1234',
-    //   database: 'invoices_app',
-    //   entities: [Entry],
-    // }),
-    // EntryModule,
+    TypeOrmModule.forRoot({
+      type: 'mysql',
+      host: 'localhost',
+      port: 3306,
+      username: 'admin',
+      password: 'adminadmin',
+      database: 'mydb1',
+      // username: 'root',
+      // password: 'test1234',
+      // database: 'invoices_app',
+      entities: [Entry],
+    }),
+    EntryModule,
     ConfigModule.forRoot(),
   ],
   controllers: [AppController],
