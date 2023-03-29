@@ -5,8 +5,8 @@ import { Entry } from './entry.entity';
 import { EntryService } from './entry.service';
 
 @Module({
-  // imports: [TypeOrmModule.forFeature([Entry])],
-  // controllers: [EntryController],
-  // providers: [EntryService],
+  imports: [TypeOrmModule.forFeature([Entry])],
+  controllers: [EntryController],
+  providers: [EntryService],
 })
 export class EntryModule {}
